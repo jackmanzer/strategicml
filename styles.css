@@ -149,43 +149,21 @@ img {
 html,
 body {
   overflow-x: hidden;
-}
-
-h1 {
-  line-height: 1.2em;
-  font-size: 1.9375em;
-  font-family: "Roboto";
-  font-weight: 900;
-}
-
-h2 {
-  line-height: 1.2em;
-  font-size: 1.563em;
-  font-family: "Fira Sans";
-  font-weight: bold;
-}
-
-h3 {
-  line-height: 1.05em;
-  font-size: 1.25em;
-  font-family: "Fira Sans";
+  font-family: "archivo";
 }
 
 h5 {
-  font-family: "Fira Sans";
   font-size: 1.25em;
   font-weight: 500;
 }
 
 p {
   line-height: 1.4em;
-  font-family: "Fira Sans";
   font-size: 1em;
 }
 
 .button {
   display: inline-block;
-  font-family: "Roboto";
   font-size: 0.8em;
   color: #033f29;
   background-color: #0def9d;
@@ -193,42 +171,19 @@ p {
   font-weight: 500;
 }
 
-/**** END: GLOBAL BASE STYLES ****/
-/**** BEGIN: GLOBAL MEDIA QUERIES ****/
-@media screen and (min-width: 457px) {
-  h1 {
-    font-size: 2.4375em;
-  }
-  h2 {
-    line-height: 1.2em;
-    font-size: 1.9375em;
-  }
-}
-@media screen and (min-width: 600px) {
-  h1 {
-    font-size: 3.0625em;
-  }
-  h2 {
-    line-height: 1.2em;
-    font-size: 2.4375em;
-  }
+.button:hover {
+  background-color: #beffe8;
 }
 
-@media screen and (min-width: 715px) {
-  h1 {
-    font-size: 3.8125em;
-  }
-  h2 {
-    font-size: 3.0625em;
-  }
-}
+/**** END: GLOBAL BASE STYLES ****/
+/**** BEGIN: GLOBAL MEDIA QUERIES ****/
 
 /**** END: GLOBAL MEDIA QUERIES ****/
 /**** BEGIN: HEADER BASE STYLES ****/
 
 .header {
-  padding-top: 1em;
-  padding-bottom: 0.6em;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
   background-color: #1e90ff;
   /* position: relative; */
 }
@@ -237,9 +192,8 @@ p {
 /**** BEGIN: MOBILE AND SMALL TABLET NAVIGATION ****/
 
 .logo-mobile {
-  padding-top: 3px;
-  margin-left: 0.8rem;
-  width: 180px;
+  margin-left: 0.75rem;
+  width: 8rem;
 }
 
 .mobile_tablet_nav {
@@ -263,7 +217,6 @@ p {
 }
 
 .mobile_tablet_nav a {
-  font-family: "Fira Sans";
   font-size: 1em;
   color: white;
   text-decoration: none;
@@ -276,12 +229,11 @@ p {
 }
 
 .hamburger-menu {
-  margin-left: 0.7rem;
-  width: 20px;
+  width: 2rem;
   position: absolute;
-  right: 11px;
-  top: 14px;
-  width: 35px;
+  top: 0.65rem;
+  right: 0.75rem;
+  width: 2rem;
 }
 
 .nav-toggle {
@@ -303,10 +255,10 @@ p {
 .desktop_nav {
   display: none;
   margin-right: 2rem;
+  padding-bottom: 0.2rem;
 }
 
 .desktop_nav a {
-  font-family: "Fira Sans";
   font-size: 0.8em;
   color: white;
   text-decoration: none;
@@ -327,22 +279,25 @@ p {
 
 .sign-up-button {
   display: none;
-  font-family: "Fira Sans";
-  font-size: 0.8em;
+  font-size: 0.75rem;
   color: #04294e;
   background-color: #cfe7ff;
   border: none;
   border-radius: 2px;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.sign-up-button:hover {
+  background-color: #9fcfff;
 }
 
 /**** END: DESKTOP NAVIGATION *****/
 /**** BEGIN: HEADER/NAVIGATION MEDIA QUERIES ****/
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 950px) {
   .hamburger-menu {
     display: none;
   }
@@ -351,8 +306,9 @@ p {
   }
 
   .header {
+    padding-top: 0.75rem;
+    padding-bottom: 0.55rem;
     display: flex;
-    padding-bottom: 1.2rem;
     justify-content: space-between;
     align-items: center;
   }
@@ -371,99 +327,123 @@ p {
 .first-row {
   background-color: #04294e;
   display: flex;
-  position: relative;
 }
 
 .first-row h1 {
   color: #f8f9fa;
+  line-height: 1.1em;
+  font-size: clamp(2.25rem, 0.9167rem + 6.6667vw, 3rem);
+  font-weight: 700;
+}
+
+.second-br {
+  display: none;
 }
 
 .first-row p {
-  margin-top: 1rem;
+  line-height: 1.7rem;
+  margin-top: 2rem;
   font-size: 1em;
-  font-family: "Roboto", sans-serif;
   margin-right: 1rem;
-  max-width: 245px;
+  width: 80%;
+  max-width: 18.6125rem;
   color: #9fcfff;
 }
-
 .first-row-button {
   margin-top: 2rem;
-  padding: 1.5em 3.3em;
+  padding: 14px 20px;
 }
-
 .banner-container {
-  padding-top: 6em;
-  padding-bottom: 7.35em;
-  margin-left: 7%;
+  padding-top: 6rem;
+  padding-bottom: 16rem;
+  margin-left: 1.5rem;
+  max-width: 452.833px;
 }
 
 .text-face {
-  margin-top: 10vw;
-  height: 500px;
-  display: none;
+  height: 28rem;
+  position: absolute;
+  left: -6rem;
+  top: 20rem;
 }
 
 .text-face-container {
-  width: 10%;
-  display: none;
+  width: 15%;
+  position: relative;
 }
 
 /**** END: INDEX FIRST ROW BASE STYLES ****/
+
 /**** BEGIN: INDEX FIRST ROW MEDIA QUERIES ****/
-
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 436px) {
   .text-face {
-    display: block;
+    padding-top: 3rem;
+    height: 38rem;
+    position: static;
+    margin-left: -3rem;
   }
 
   .text-face-container {
-    display: block;
+    width: 14%;
+    position: static;
+  }
+  .banner-container {
+    padding-top: 8rem;
+    padding-bottom: 12rem;
   }
 }
 
-@media screen and (min-width: 457px) {
+@media screen and (min-width: 564px) {
   .banner-container {
-    padding-top: 18vw;
+    padding-bottom: 14rem;
+  }
+  .first-br {
+    display: none;
   }
   .first-row p {
-    max-width: 320px;
+    max-width: none;
   }
 }
 
-@media screen and (min-width: 515px) {
-  .banner-container {
-    padding-top: 20vw;
+@media screen and (min-width: 606px) {
+  .first-row {
+    justify-content: space-between;
   }
-  .text-face-container {
-    margin-left: 5vw;
+  .first-row h1 {
+    font-size: clamp(3rem, 1.2036rem + 4.7431vw, 4.5rem);
   }
-}
+  .second-br {
+    display: inline;
+  }
 
-@media screen and (min-width: 600px) {
   .first-row p {
-    max-width: 400px;
+    max-width: 55%;
   }
-  .text-face-container {
-    margin-top: 3em;
-  }
-}
-
-@media screen and (min-width: 724px) {
   .banner-container {
-    padding-top: 8em;
+    max-width: none;
   }
   .text-face {
-    margin-top: 5em;
-    height: 550px;
-  }
-}
-
-@media screen and (min-width: 1184px) {
-  .text-face {
-    margin-top: 2em;
     position: absolute;
-    right: 2%;
+    top: 3rem;
+    margin-left: -2rem;
+  }
+
+  .text-face-container {
+    width: clamp(2rem, -19.5573rem + 56.917vw, 20rem);
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 753px) {
+  .text-face {
+    position: static;
+    height: 40rem;
+  }
+  .text-face-container {
+    width: clamp(2rem, -19.5573rem + 56.917vw, 20rem);
+    position: static;
+    display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -472,6 +452,9 @@ p {
 
 .second-row h2 {
   color: var(--text-black);
+  line-height: 1.2em;
+  font-size: 1.875rem;
+  font-weight: bold;
 }
 
 .video-mockup {
@@ -483,16 +466,17 @@ p {
 }
 
 .second-row p {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   max-width: 581px;
   color: var(--text-black);
 }
 
 .course-overview-container1 {
-  padding-top: 1.5rem;
+  padding-top: 4rem;
   background-color: #f1f1f1;
-  padding-bottom: 4em;
-  margin-left: 3%;
+  padding-bottom: 6rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 .course-overview-container2 {
   background-color: #f1f1f1;
@@ -592,9 +576,9 @@ p {
 }
 
 .third-row-button {
-  margin-top: 2rem;
   margin-left: 7%;
-  padding: 1.5em 2.2em;
+  margin-top: 1rem;
+  padding: 14px 20px;
 }
 
 .excel-product {
@@ -699,6 +683,7 @@ p {
 }
 
 .fifth-row h3 {
+  font-size: 20px;
   margin-left: 1rem;
   margin-top: 1rem;
   font-weight: bold;
@@ -753,7 +738,6 @@ input[type="email"] {
   margin-top: 0.75rem;
   background-color: #073f88;
   border: solid white 0.1rem;
-  font-family: "Fira Sans";
   color: #9fcfff;
   font-size: 0.8rem;
   padding-top: 0.5em;
@@ -766,7 +750,6 @@ input[type="name"] {
   margin-top: 1rem;
   background-color: #073f88;
   border: solid white 0.1rem;
-  font-family: "Fira Sans";
   color: #9fcfff;
   font-size: 0.8rem;
   padding-top: 0.5em;
@@ -778,7 +761,7 @@ input[type="name"] {
 .contact-form-textarea {
   background-color: #073f88;
   border: solid white 0.1rem;
-  font-family: "Fira Sans";
+  font-family: "archivo";
   height: 5em;
   margin-top: 0.75rem;
   font-size: 0.8rem;
@@ -794,7 +777,6 @@ input[type="name"] {
 }
 
 .contact-form-submit {
-  font-family: "Roboto";
   font-size: 0.8em;
   color: #033f29;
   background-color: #0def9d;
@@ -802,6 +784,10 @@ input[type="name"] {
   border: none;
   padding: 1.5em 4em;
   margin-top: 0.75rem;
+}
+
+.contact-form-submit:hover {
+  background-color: #00cf83;
 }
 
 .form-input-container {
@@ -883,12 +869,12 @@ input[type="name"] {
 
 .footer-nav a {
   font-size: 1em;
-  font-family: "Fira Sans";
   color: #9fcfff;
   text-decoration: none;
 }
 
 .footer h3 {
+  font-size: 20px;
   color: white;
   font-weight: 500;
   margin-left: 7%;
@@ -897,8 +883,7 @@ input[type="name"] {
 
 .footer span {
   display: inline-block;
-  font-family: "Fira Sans";
-  font-size: 1em;
+  font-size: 16px;
   color: #0def9d;
   margin-left: 7%;
   margin-top: 1.5rem;
@@ -924,7 +909,7 @@ input[type="name"] {
 }
 
 .copywrite-text {
-  font-size: 0.8em;
+  font-size: 12px;
   color: #9fcfff;
   margin-left: 7%;
   margin-top: 1rem;
@@ -987,20 +972,20 @@ input[type="name"] {
 /**** BEGIN: COURSE PAGE BASE STYLES ****/
 
 .courses-heading {
-  height: 180px;
+  height: 8rem;
   background-color: #073f88;
   background-image: url("img/courses-heading-bg-img.jpg");
   background-size: cover;
   background-position: center center;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .courses-heading h1 {
   color: white;
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
-  font-size: 1.875rem;
+  margin-left: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
   line-height: 2.25rem;
 }
 
@@ -1108,7 +1093,7 @@ input[type="name"] {
   background-size: cover;
   background-position: center bottom;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .ml-in-excel-heading h1 {
@@ -1172,7 +1157,6 @@ input[type="name"] {
 input[type="text"] {
   margin-left: 0.6rem;
   width: 100%;
-  font-family: "fira sans";
   font-size: 12px;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -1181,7 +1165,6 @@ input[type="text"] {
 }
 
 .go-button {
-  font-family: "Roboto";
   font-size: 0.8em;
   color: white;
   background-color: #04294e;
@@ -1191,7 +1174,6 @@ input[type="text"] {
   margin-left: 1rem;
 }
 .clear-button {
-  font-family: "Roboto";
   font-size: 0.8em;
   color: #033f29;
   background-color: #9fcfff;
@@ -1211,7 +1193,6 @@ input[type="text"] {
 
 .select-container {
   font-size: 14px;
-  font-family: "fira sans";
   margin-left: 1rem;
   margin-top: 1rem;
 }
@@ -1245,7 +1226,6 @@ select {
 
 .about-copy h2 {
   color: #a5d2ff;
-  font-family: "roboto";
   font-weight: medium;
   font-size: 30px;
   margin-left: 1rem;
@@ -1281,12 +1261,11 @@ select {
   max-height: 147px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .mobile-about-sub-heading h3 {
   color: white;
   font-size: 30px;
-  font-family: "roboto";
   font-weight: bold;
   margin-left: 1rem;
 }
@@ -1313,7 +1292,6 @@ select {
 
 .founder-profile h4 {
   font-size: 16px;
-  font-family: "roboto";
   font-weight: bold;
   color: #113654;
   margin-top: 0.5rem;
@@ -1321,14 +1299,12 @@ select {
 
 .founder-profile h5 {
   font-size: 12px;
-  font-family: "fira sans";
   color: #0c7ae9;
   font-weight: medium;
   margin-top: 0.25rem;
 }
 .founder-profile p {
   font-size: 16px;
-  font-family: "fira sans";
   color: #113654;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -1361,6 +1337,7 @@ select {
   .about-copy {
     padding-top: 4.5em;
     padding-bottom: 5em;
+    width: 100%;
   }
   .about-copy h2 {
     margin-left: 2rem;
