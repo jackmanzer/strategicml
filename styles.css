@@ -141,30 +141,15 @@ img {
 /**** END: CSS RESET ****/
 
 /**** Variables ****/
+
 :root {
   --text-black: #113654;
 }
+
 /**** BEGIN: GLOBAL BASE STYLES ****/
 
-html,
 body {
   font-family: "archivo";
-}
-
-p {
-  line-height: 1.4em;
-  font-size: 1em;
-}
-
-.button {
-  display: inline-block;
-  font-size: 0.8em;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.button:hover {
-  background-color: #beffe8;
 }
 
 .overflow-prevention-wrapper {
@@ -172,13 +157,11 @@ p {
 }
 
 /**** END: GLOBAL BASE STYLES ****/
-/**** BEGIN: GLOBAL MEDIA QUERIES ****/
 
-/**** END: GLOBAL MEDIA QUERIES ****/
-/**** BEGIN: HEADER BASE STYLES ****/
+/**** BEGIN: HEADER/NAVIGATION BASE STYLES ****/
 
 .header {
-  background-color: #0c7ae9;
+  background-color: #04294e;
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.75rem;
@@ -186,9 +169,6 @@ p {
   justify-content: space-between;
   -webkit-justify-content: space-between;
 }
-
-/**** END: HEADER BASE STYLES ****/
-/**** BEGIN: NAVIGATION ****/
 
 .logo {
   padding-top: 0.75rem;
@@ -199,7 +179,7 @@ p {
 .mobile-tablet-nav {
   margin-top: 3.35rem;
   position: absolute;
-  background-color: #0c7ae9;
+  background-color: #04294e;
   width: 100%;
   height: calc(100vh - 2.644375rem);
   transform: scale(1, 0);
@@ -249,31 +229,28 @@ p {
   transition: opacity 400ms ease-in-out 400ms;
 }
 
-/**** END: MOBILE AND SMALL TABLET NAVIGATION ****/
-/**** BEGIN: DESKTOP NAVIGATION *****/
-
 .desktop-nav {
   display: none;
-  margin-right: 2rem;
+  margin-right: 1rem;
   padding-bottom: 0.2rem;
 }
 
-.desktop_nav a {
+.desktop-nav a {
   font-size: 0.8em;
   color: white;
   text-decoration: none;
 }
 
-.desktop_nav a:hover {
-  color: #04294e;
+.desktop-nav a:hover {
+  color: #1ffffc;
 }
 
-.desktop_nav ul {
+.desktop-nav ul {
   display: flex;
   align-items: center;
 }
 
-.desktop_nav li {
+.desktop-nav li {
   margin-left: 3rem;
 }
 
@@ -281,28 +258,43 @@ p {
   display: none;
   font-size: 0.75rem;
   color: #04294e;
-  background-color: #cfe7ff;
+  background-color: white;
   border: none;
   border-radius: 2px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
 }
 
 .sign-up-button:hover {
-  background-color: #9fcfff;
+  color: #04294e;
+  background-color: #1ffffc;
 }
 
-/**** END: DESKTOP NAVIGATION *****/
+.log-in-link {
+  color: #0def9d;
+}
+
+.log-in-link:hover {
+  color: #00cf83;
+}
+
+/**** END: HEADER/NAVIGATION BASE STYLES ****/
 /**** BEGIN: HEADER/NAVIGATION MEDIA QUERIES ****/
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 975px) {
   .hamburger-menu {
     display: none;
   }
-  .desktop_nav {
+
+  .desktop-nav {
     display: block;
+  }
+
+  .logo {
+    padding-top: 0.1rem;
   }
 
   .header {
@@ -312,39 +304,45 @@ p {
     justify-content: space-between;
     align-items: center;
   }
+
   .sign-up-button {
     display: inline-block;
   }
 }
 
 /**** END: HEADER/NAVIGATION MEDIA QUERIES ****/
-/**** BEGIN: FOOTER BASE STYLES ****/
-/**** END: FOOTER BASE STYLES ****/
-/**** BEGIN: FOOTER MEDIA QUERIES ****/
-/**** END: FOOTER MEDIA QUERIES ****/
-/**** BEGIN: INDEX FIRST ROW BASE STYLES ****/
 
-.first-row {
+/**** BEGIN: BANNER SECTION BASE STYLES ****/
+
+.banner-section {
   background-color: #04294e;
   display: flex;
 }
 
-.banner-content {
+.banner-content-container {
   display: flex;
 }
 
-.first-row h1 {
+.banner-copy-container {
+  padding-top: 6rem;
+  padding-bottom: 16rem;
+  margin-left: 1.5rem;
+  max-width: 28.3020625rem;
+}
+
+.banner-copy-container h1 {
   color: #f8f9fa;
   line-height: 1.1em;
   font-size: clamp(2.25rem, 0.9167rem + 6.6667vw, 3rem);
   font-weight: 700;
 }
+
 .second-br {
   display: none;
 }
 
-.first-row p {
-  line-height: 1.7rem;
+.banner-copy-container p {
+  line-height: 1.4rem;
   margin-top: 2rem;
   font-size: 1em;
   margin-right: 1rem;
@@ -352,17 +350,21 @@ p {
   max-width: 18.6125rem;
   color: #9fcfff;
 }
-.first-row-button {
+
+.banner-button {
   margin-top: 2rem;
   padding: 14px 20px;
   color: #033f29;
   background-color: #0def9d;
+  display: inline-block;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
 }
-.banner-container {
-  padding-top: 6rem;
-  padding-bottom: 16rem;
-  margin-left: 1.5rem;
-  max-width: 28.3020625rem;
+
+.text-face-container {
+  width: 15%;
+  position: relative;
 }
 
 .text-face {
@@ -372,14 +374,9 @@ p {
   top: 20rem;
 }
 
-.text-face-container {
-  width: 15%;
-  position: relative;
-}
+/**** END: BANNER SECTION BASE STYLES ****/
 
-/**** END: INDEX FIRST ROW BASE STYLES ****/
-
-/**** BEGIN: INDEX FIRST ROW MEDIA QUERIES ****/
+/**** BEGIN: BANNER SECTION MEDIA QUERIES ****/
 @media screen and (min-width: 436px) {
   .text-face {
     padding-top: 3rem;
@@ -392,7 +389,8 @@ p {
     width: 14%;
     position: static;
   }
-  .banner-container {
+
+  .banner-copy-container {
     padding-top: 8rem;
     padding-bottom: 12rem;
     max-width: 25rem;
@@ -406,34 +404,40 @@ p {
 }
 
 @media screen and (min-width: 564px) {
-  .banner-container {
+  .banner-copy-container {
     padding-bottom: 14rem;
   }
+
   .first-br {
     display: none;
   }
-  .first-row p {
+
+  .banner-copy-container p {
     max-width: none;
   }
 }
 
 @media screen and (min-width: 588px) {
-  .first-row {
+  .banner-section {
     justify-content: space-between;
   }
-  .first-row h1 {
+
+  .banner-copy-container h1 {
     font-size: clamp(3rem, 1.2036rem + 4.7431vw, 4.5rem);
   }
+
   .second-br {
     display: inline;
   }
 
-  .first-row p {
+  .fbanner-copy-container p {
     max-width: 55%;
   }
-  .banner-container {
+
+  .banner-copy-container {
     max-width: none;
   }
+
   .text-face {
     position: absolute;
     top: 3rem;
@@ -451,6 +455,7 @@ p {
     position: static;
     height: 40rem;
   }
+
   .text-face-container {
     width: clamp(2rem, -19.5573rem + 56.917vw, 20rem);
     position: static;
@@ -460,27 +465,60 @@ p {
 }
 
 @media screen and (min-width: 1112px) {
-  .first-row {
+  .banner-section {
     justify-content: center;
   }
-  .banner-content {
+
+  .banner-content-container {
     max-width: clamp(69.5rem, 48.2639rem + 30.5556vw, 75rem);
   }
 }
-/**** END: INDEX FIRST ROW MEDIA QUERIES ****/
-/**** BEGIN: INDEX SECOND ROW BASE STYLES ****/
+/**** END: BANNER SECTION MEDIA QUERIES ****/
 
-.second-row {
+/**** BEGIN: VIDEO SECTION BASE STYLES ****/
+
+.video-section {
   padding-top: 4rem;
   background-color: #f1f1f1;
   padding-bottom: 3rem;
 }
-.second-row h2 {
+.video-section h2 {
   color: var(--text-black);
   margin-left: 1.5rem;
   line-height: 1.2em;
   font-size: 1.875rem;
   font-weight: bold;
+}
+
+.video-section-content-container {
+  max-width: 46.375rem;
+}
+
+.course-overview-copy-container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  line-height: 1.4rem;
+}
+
+.course-overview-copy-container p {
+  margin-top: 1.5rem;
+  color: var(--text-black);
+}
+
+.video-section-button {
+  margin-top: 2rem;
+  padding: 14px 20px;
+  color: white;
+  background-color: #0c7ae9;
+  margin-left: 1.5rem;
+  display: inline-block;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.video-section-button:hover {
+  background-color: #073f88;
 }
 
 .video-mockup {
@@ -489,40 +527,16 @@ p {
   margin-top: clamp(3rem, 0.7143rem + 11.4286vw, 5rem);
 }
 
-.second-row p {
-  margin-top: 1.5rem;
-  color: var(--text-black);
-}
-
-.course-overview-container1 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-.course-overview-container2 {
-  max-width: 46.375rem;
-}
-.second-row-button {
-  margin-top: 2rem;
-  padding: 14px 20px;
-  color: white;
-  background-color: #0c7ae9;
-  margin-left: 1.5rem;
-}
-
-.second-row-button:hover {
-  background-color: #073f88;
-}
-
 /**** END: INDEX SECOND ROW BASE STYLES ****/
 /**** BEGIN: INDEX SECOND ROW MEDIA QUERIES ****/
 
 @media screen and (min-width: 612px) {
-  .course-overview-container1 {
+  .course-overview-copy-container {
     display: grid;
     grid-template-columns: 45% 45%;
     grid-column-gap: 3rem;
   }
-  .second-row p {
+  .course-overview-copy-container p {
     max-width: 24rem;
   }
 }
@@ -535,15 +549,16 @@ p {
 }
 
 @media screen and (min-width: 742px) {
-  .course-overview-container2 {
+  .video-section-content-container {
     max-width: 46.375rem;
     margin: auto;
   }
 }
+
 /**** END: INDEX SECOND ROW MEDIA QUERIES ****/
 /**** BEGIN: INDEX THIRD ROW BASE STYLES ****/
 
-.ml-in-excel-banner {
+.ml-in-excel-banner-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-color: #04294e;
@@ -574,6 +589,10 @@ p {
   padding: 14px 20px;
   color: #033f29;
   background-color: #0def9d;
+  display: inline-block;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .free-resources-container {
