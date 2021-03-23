@@ -12,99 +12,102 @@
     />
     <link rel="stylesheet" href="http://basehold.it/" />
   </head>
-  <body>
-    <header class="header">
-      <img class="logo-mobile" src="img/logo-header-mobile.png" />
-
-      <input class="nav-toggle" id="nav-toggle" type="checkbox" />
-
-      <label for="nav-toggle" id="hamburger-menu">
-        <span><img class="hamburger-menu" src="img/hamburger-menu.png" /></span
-      ></label>
-
-      <nav class="mobile_tablet_nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">View Courses</a></li>
-          <li><a href="ml-in-excel.html">ML-in-Excel</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html#contact-form">Contact</a></li>
-          <li><a href="#">Log In</a></li>
-          <li><a href="#">Sign Up</a></li>
-        </ul>
-      </nav>
-
-      <nav class="desktop_nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">View Courses</a></li>
-          <li><a href="ml-in-excel.html">ML-in-Excel</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html#contact-form">Contact</a></li>
-          <li><a href="#">Log In</a></li>
-          <li><button class="sign-up-button">Sign Up</button></li>
-        </ul>
-      </nav>
-    </header>
-    <section class="ml-in-excel-heading">
-      <h1>ML-in-Excel</h1>
-    </section>
-    <section>
-      <div class="ml-in-excel-copy-container">
-        <h2>Apply the Latest ML-Methods to Your Excel Spreadsheets</h2>
-        <p>
-          No need to learn to code or mess around with other software. Our
-          spreadsheets can process your data, generate actionable insights, and
-          produce beautiful graphics - all without leaving Excel.
-        </p>
-      </div>
-      <div class="search-element-container">
-        <div class="search-input">
-          <img class="spyglass" src="img/spyglass.png" /><input
-            type="text"
-            placeholder="search spreadsheets"
-          />
-          <button class="go-button">Go</button>
+  <body id="body">
+    <div class="overflow-prevention-wrapper">
+      <header class="header">
+        <div>
+          <img class="logo" src="img/logo-header.png" />
         </div>
-        <div class="select-container">
-          <select></select>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+        <label for="nav-toggle" id="hamburger-menu">
+          <span>
+            <img class="hamburger-menu" src="img/hamburger-menu.png" />
+          </span>
+        </label>
+        <nav class="mobile-tablet-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">View Courses</a></li>
+            <li><a href="ml-in-excel.html">ML-in-Excel</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact-form">Contact</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">View Courses</a></li>
+            <li><a href="ml-in-excel.html">ML-in-Excel</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#contact-form">Contact</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><button class="sign-up-button">Sign Up</button></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="ml-in-excel-heading">
+        <h1>ML-in-Excel</h1>
+      </section>
+      <section>
+        <div class="ml-in-excel-copy-container">
+          <h2>Apply the Latest ML-Methods to Your Excel Spreadsheets</h2>
+          <p>
+            No need to learn to code or mess around with other software. Our
+            spreadsheets can process your data, generate actionable insights,
+            and produce beautiful graphics - all without leaving Excel.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-wrap-container1">
-        <img class="logo-mobile footer-logo" src="img/logo-footer-mobile.png" />
-        <div class="footer-wrap-container2">
-          <nav class="footer-nav">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="courses.html">View Courses</a></li>
-              <li><a href="ml-in-excel.html">ML-in-Excel</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">Log In</a></li>
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Terms of Use</a></li>
-            </ul>
-          </nav>
-          <div class="contact-info-container">
-            <h3>Contact Us</h3>
-            <a><span>info@strategicml.com</span></a>
-            <p class="footer-address">
-              Strategic ML Inc., 4301 W. William Cannon Dr,
-              <br class="address-br" />
-              Ste B 150 #105, Austin, TX 78749, USA
-            </p>
+        <div class="search-element-container">
+          <div class="search-input">
+            <img class="spyglass" src="img/spyglass.png" /><input
+              type="text"
+              placeholder="search spreadsheets"
+            />
+            <button class="go-button">Go</button>
+          </div>
+          <div class="select-container">
+            <select></select>
           </div>
         </div>
-        <hr />
-        <p class="copywrite-text">
-          Copywrite © Strategic ML 2020 <br />
-          All Rights Reserved
-        </p>
-      </div>
-    </footer>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-wrap-container1">
+          <img class="logo footer-logo" src="img/logo-footer-mobile.png" />
+          <div class="footer-wrap-container2">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">View Courses</a></li>
+                <li><a href="ml-in-excel.html">ML-in-Excel</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Terms of Use</a></li>
+              </ul>
+            </nav>
+            <div class="contact-info-container">
+              <h3>Contact Us</h3>
+              <a><span>info@strategicml.com</span></a>
+              <p class="footer-address">
+                Strategic ML Inc., 4301 W. William Cannon Dr,
+                <br class="address-br" />
+                Ste B 150 #105, Austin, TX 78749, USA
+              </p>
+            </div>
+          </div>
+          <hr />
+          <p class="copywrite-text">
+            Copywrite © Strategic ML 2020 <br />
+            All Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="strategicml.js"></script>
   </body>
 </html>
