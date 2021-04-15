@@ -91,7 +91,11 @@
 
         <a class=" video-section-button" href="courses.html">Meet the team</a>
 
-        <img class="video-mockup" src="img/video-mockup.png" />
+        <!-- <img class="video-mockup" src="img/video-mockup.png" /> -->
+
+        <video class="video-mockup" type="video/mp4" controls>
+          <source src="img/course-promo.mp4">
+        </video>
 
         <p class="video-caption">Ut enim ad minim veniam, quis nostrud. Ut labore et dolore
           magna aliqua.</p>
@@ -117,7 +121,7 @@
           </p>
 
           <a class="ml-in-excel-banner-button" href="ml-in-excel.html">
-            View Spreadsheets</a>
+            See Beta</a>
 
           <div class="free-resources-container-desktop">
             <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
@@ -139,20 +143,20 @@
           <img class="excel-illustration-DBSCAN" src="img/excel-product.png" />
 
           <p class="ml-in-excel-banner-caption">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do scing elit, sed do scing elit, sed do.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
 
           <div class="ml-in-excel-link-container">
-            <a class="ml-in-excel-link">DBSCAN clustering</a><img src="img/arrow.png" class="arrow" />
+            <!-- <a class="ml-in-excel-link">DBSCAN clustering</a><img src="img/arrow.png" class="arrow" /> -->
           </div>
           <img class="excel-illustration-hierarchical" src="img/excel-product1.png" />
 
           <p class="ml-in-excel-banner-caption">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do scing elit, sed do scing elit, sed do.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do scing elit.
           </p>
 
           <div class="ml-in-excel-link-container">
-            <a class="ml-in-excel-link">Hierarchical factor analysis</a><img src="img/arrow.png" class="arrow" />
+            <!-- <a class="ml-in-excel-link">Hierarchical factor analysis</a><img src="img/arrow.png" class="arrow" /> -->
           </div>
         </div>
         <div class="free-resources-container-mobile-tablet">
@@ -263,10 +267,12 @@
           </p>
         </div>
         <div class="form-input-container">
-          <input class="contact-form-input" type="name" placeholder="Your name" />
-          <input class="contact-form-input" type="email" placeholder="Your email" />
-          <textarea class="contact-form-textarea" type="email" placeholder="How can we help?"></textarea>
-          <button class="contact-form-submit-button" type="submit">Submit</button>
+          <form name="contact" method="POST" data-netlify="true">
+            <input class="contact-form-input" type="name" name="name" placeholder="Your name" />
+            <input class="contact-form-input" type="email" name="email" placeholder="Your email" />
+            <textarea class="contact-form-textarea" name="message" placeholder="How can we help?"></textarea>
+            <button class="contact-form-submit-button" type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </section>

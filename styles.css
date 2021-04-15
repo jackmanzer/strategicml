@@ -748,11 +748,11 @@ body {
 
 .ml-in-excel-banner-caption {
   font-size: 0.875rem;
-  margin-top: 1rem;
   color: var(--text-secondary);
   margin-left: 1.5rem;
   width: calc(100% - 3rem);
   line-height: 1.25rem;
+  margin-top: .25rem;
 }
 
 
@@ -838,8 +838,8 @@ body {
   }
 
   .ml-in-excel-banner-caption {
-    margin-left: 2rem;
     width: calc(100% - 3rem);
+    margin-left: 1rem;
   }
 
   .ml-in-excel-link-container {
