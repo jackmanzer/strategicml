@@ -331,6 +331,7 @@ body {
   background-color: var(--background-medium);
   display: flex;
   padding-bottom: 4rem;
+  border-bottom: .1rem solid #073F88;
 }
 
 .banner-content-container {
@@ -507,6 +508,7 @@ body {
   padding-top: 4rem;
   background-color: var(--background-light);
   padding-bottom: 4rem;
+  border-bottom: .1rem solid #073F88;
 }
 
 .video-section h5 {
@@ -623,6 +625,7 @@ body {
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-color: var(--background-medium);
+  border-bottom: .1rem solid #073F88;
 }
 
 .ml-in-excel-banner-copy-container h5 {
@@ -904,6 +907,7 @@ body {
   padding-bottom: 6rem;
   color: var(--text-white);
   background-color: var(--background-light);
+  border-bottom: .1rem solid #073F88;
 }
 
 .testimonial-section-title-copy-container h2 {
@@ -1032,6 +1036,7 @@ body {
   background-color: var(--background-medium);
   padding-bottom: 6rem;
   padding-top: 4rem;
+  border-bottom: .1rem solid #073F88;
 }
 
 .form-heading-container h5 {
@@ -1617,7 +1622,7 @@ select {
 .about-copy {
   padding-top: 3rem;
   padding-bottom: 4rem;
-  max-width: 928px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -1674,35 +1679,25 @@ select {
   color: var(--text-white);
 }
 
-.bio-container {
-  padding-top: 1em;
-  padding-bottom: 4em;
+.about-section2 {
   background-color: var(--background-light);
 }
 
+.bio-container {
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+}
+
 .mobile-about-sub-heading {
-  background-color: #1E90FF;
-  height: 36vw;
-  padding-bottom: 0.5em;
-  max-height: 147px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  background-color: var(--background-light);
+  text-align: center;
+  padding-top: 2.5rem;
 }
 .mobile-about-sub-heading h3 {
   color: white;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: bold;
   margin-left: 1rem;
-}
-.mobile-about-sub-heading hr {
-  border: none;
-  background-color: #beffe8;
-  height: 3px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 140px;
-  margin-top: 0.25rem;
 }
 
 .founder-profile {
@@ -1710,6 +1705,7 @@ select {
   flex-direction: column;
   align-items: center;
   margin-top: 2.5rem;
+  text-align: center;
 }
 
 .founder-profile img {
@@ -1720,14 +1716,14 @@ select {
   font-weight: bold;
   font-size: .875rem;
   color: var(--text-white);
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
 }
 
 .founder-profile h5 {
   font-size: .75rem;
   color: #0c7ae9;
   font-weight: 500;
-  margin-top: 0.25rem;
+  margin-top: 0.45rem;
 }
 .founder-profile p {
   font-size: .875rem;
@@ -1741,25 +1737,13 @@ select {
 /**** END: ABOUT PAGE BASE STYLES ****/
 /**** BEGIN: ABOUT PAGE MEDIA QUERIES ****/
 
-@media screen and (min-width: 600px) {
-  
-  .mobile-about-sub-heading h3 {
-    font-size: 36px;
-  }
-  .mobile-about-sub-heading hr {
-    width: 160px;
-  }
-}
 
-@media screen and (min-width: 766px) {
-
-}
 
 @media screen and (min-width: 627px) {
   .bio-container {
     display: grid;
     grid-template-columns: 50% 50%;
-    max-width: 955px;
+    max-width: 800px;
   }
 }
 
@@ -1768,23 +1752,7 @@ select {
     margin: auto;
   }
 }
-@media screen and (min-width: 984px) {
- 
-  
-  .mobile-about-sub-heading {
-    padding-bottom: 1em;
-    padding-top: 1em;
-  }
-  .mobile-about-sub-heading h3 {
-    font-size: 48px;
-    margin-left: 2rem;
-  }
-  .mobile-about-sub-heading hr {
-    margin-left: 2rem;
-    width: 210px;
-    height: 4px;
-  }
-}
+
 
 
 /**** END: ABOUT PAGE MEDIA QUERIES ****/
