@@ -504,6 +504,10 @@ body {
 
 /**** BEGIN: VIDEO SECTION BASE STYLES ****/
 
+video:focus {
+  outline: none;
+}
+
 .video-section {
   padding-top: 4rem;
   background-color: var(--background-light);
@@ -1095,8 +1099,21 @@ input[type="name"] {
   width: calc(100% - 10.4px);
 }
 
-::placeholder {
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   opacity: 100%;
+  color: #9fcfff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  opacity: 100%;
+  color: #9fcfff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  opacity: 100%;
+  color: #9fcfff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  opacity: 100%;
+  color: #9fcfff;
 }
 
 .contact-form-submit-button {
