@@ -143,7 +143,16 @@ img {
 /**** Variables ****/
 
 :root {
+  --background-light:#031D37;
+  --background-medium:#02162A;
+  --background-dark:#01080F; 
   --text-black: #113654;
+  --text-white: rgba(255,255,255,.87);
+  --text-secondary: rgba(159,207,255, .68);
+  --text-tertiary:rgba(255,255,255, .40);
+  --primary-accent-green: rgba(25,227,153,1);
+  
+
 }
 
 /**** BEGIN: GLOBAL BASE STYLES ****/
@@ -156,12 +165,16 @@ body {
   overflow-x: hidden;
 }
 
+.p-heading-margin {
+  margin-top: 1.75rem;
+}
+
 /**** END: GLOBAL BASE STYLES ****/
 
 /**** BEGIN: HEADER/NAVIGATION BASE STYLES ****/
 
 .header {
-  background-color: #04294e;
+  background-color: var(--background-medium);
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.75rem;
@@ -179,7 +192,7 @@ body {
 .mobile-tablet-nav {
   margin-top: 3.35rem;
   position: absolute;
-  background-color: #04294e;
+  background-color: var(--background-medium);
   width: 100%;
   height: calc(100vh - 2.644375rem);
   transform: scale(1, 0);
@@ -191,22 +204,22 @@ body {
 }
 
 .mobile-tablet-nav li {
-  line-height: 0.91rem;
-  margin-top: 1.5rem;
+  line-height: 1rem;
+  margin-top: .75rem;
   padding-left: 1.25rem;
   padding-bottom: 1.5rem;
 }
 
 .mobile-tablet-nav a {
   font-size: 1em;
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
 
 .mobile-tablet-nav a:hover {
-  color: #0def9d;
+  color: #30EEEC;
 }
 
 .hamburger-menu {
@@ -237,12 +250,12 @@ body {
 
 .desktop-nav a {
   font-size: 0.8em;
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
 }
 
 .desktop-nav a:hover {
-  color: #1ffffc;
+  color: #30EEEC;
 }
 
 .desktop-nav ul {
@@ -257,8 +270,8 @@ body {
 .sign-up-button {
   display: none;
   font-size: 0.75rem;
-  color: #04294e;
-  background-color: white;
+  color: #0A57C2;
+  background-color: var(--text-white);
   border: none;
   border-radius: 2px;
   padding-top: 0.75rem;
@@ -270,15 +283,15 @@ body {
 
 .sign-up-button:hover {
   color: #04294e;
-  background-color: #1ffffc;
+  background-color: #30EEEC;
 }
 
 .log-in-link {
-  color: #0def9d;
+  color: #30EEEC;
 }
 
 .log-in-link:hover {
-  color: #00cf83;
+  color: #00CCC9;
 }
 
 /**** END: HEADER/NAVIGATION BASE STYLES ****/
@@ -315,8 +328,9 @@ body {
 /**** BEGIN: BANNER SECTION BASE STYLES ****/
 
 .banner-section {
-  background-color: #04294e;
+  background-color: var(--background-medium);
   display: flex;
+  padding-bottom: 4rem;
 }
 
 .banner-content-container {
@@ -331,8 +345,8 @@ body {
 }
 
 .banner-copy-container h1 {
-  color: #f8f9fa;
-  line-height: 1.1em;
+  color: var(--text-white);
+  line-height: 115%;
   font-size: clamp(2.25rem, 0.9167rem + 6.6667vw, 3rem);
   font-weight: 700;
 }
@@ -342,24 +356,30 @@ body {
 }
 
 .banner-copy-container p {
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   margin-top: 2rem;
   font-size: 1em;
   margin-right: 1rem;
   width: 80%;
   max-width: 18.6125rem;
-  color: #9fcfff;
+  color: var(--text-secondary);
 }
 
 .banner-button {
   margin-top: 2rem;
   padding: 14px 20px;
-  color: #033f29;
-  background-color: #0def9d;
+  color: var(--primary-accent-green);
+  background-color: var(--background-medium);
+  border: solid .1rem var(--primary-accent-green);
   display: inline-block;
   font-size: 0.8em;
   text-decoration: none;
   font-weight: 500;
+}
+
+.banner-button:hover {
+  background-color: var(--primary-accent-green);
+  color: var(--background-medium);
 }
 
 .text-face-container {
@@ -464,6 +484,11 @@ body {
   }
 }
 
+@media screen and (min-width: 858px) {
+  .banner-section {
+    padding-bottom: 0rem;
+  }
+}
 @media screen and (min-width: 1112px) {
   .banner-section {
     justify-content: center;
@@ -473,21 +498,34 @@ body {
     max-width: clamp(69.5rem, 48.2639rem + 30.5556vw, 75rem);
   }
 }
+
 /**** END: BANNER SECTION MEDIA QUERIES ****/
 
 /**** BEGIN: VIDEO SECTION BASE STYLES ****/
 
 .video-section {
   padding-top: 4rem;
-  background-color: #f1f1f1;
-  padding-bottom: 3rem;
+  background-color: var(--background-light);
+  padding-bottom: 4rem;
 }
-.video-section h2 {
-  color: var(--text-black);
+
+.video-section h5 {
+  color: #1E90FF;
   margin-left: 1.5rem;
-  line-height: 1.2em;
+}
+
+.video-section h2 {
+  margin-top: 1rem;
+  color: var(--text-white);
+  margin-left: 1.5rem;
+  line-height: 120%;
   font-size: 1.875rem;
   font-weight: bold;
+  max-width: calc(100% - 3rem);
+}
+
+.vid-section-title-br {
+  display: none;
 }
 
 .video-section-content-container {
@@ -497,19 +535,20 @@ body {
 .course-overview-copy-container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
 }
 
 .course-overview-copy-container p {
   margin-top: 1.5rem;
-  color: var(--text-black);
+  color: var(--text-secondary);
 }
 
 .video-section-button {
   margin-top: 2rem;
   padding: 14px 20px;
-  color: white;
-  background-color: #0c7ae9;
+  color: var(--primary-accent-green);
+  background-color: var(--background-light);
+  border: solid .1rem var(--primary-accent-green);
   margin-left: 1.5rem;
   display: inline-block;
   font-size: 0.8em;
@@ -518,26 +557,35 @@ body {
 }
 
 .video-section-button:hover {
-  background-color: #073f88;
+  background-color: var(--primary-accent-green);
+  color: var(--background-light);
 }
 
 .video-mockup {
   width: calc(100% - 1.5rem);
   margin-left: 0.75rem;
-  margin-top: clamp(3rem, 0.7143rem + 11.4286vw, 5rem);
+  margin-top: 4rem;
 }
 
-/**** END: INDEX SECOND ROW BASE STYLES ****/
-/**** BEGIN: INDEX SECOND ROW MEDIA QUERIES ****/
+.video-caption {
+  font-size: .875rem;
+  color: var(--text-secondary);
+  margin-left: 1.5rem;
+  max-width: calc(100% - 3rem);
+  line-height: 1.25rem;
+  margin-top: .25rem;
+}
+/**** END: VIDEO SECTION BASE STYLES ****/
+/**** BEGIN: VIDEO SECION MEDIA QUERIES ****/
 
-@media screen and (min-width: 612px) {
-  .course-overview-copy-container {
-    display: grid;
-    grid-template-columns: 45% 45%;
-    grid-column-gap: 3rem;
+@media screen and (min-width: 548px) {
+  .vid-section-title-br {
+    display: inline;
   }
+}
+@media screen and (min-width: 612px) {
   .course-overview-copy-container p {
-    max-width: 24rem;
+    max-width: 44rem;
   }
 }
 
@@ -548,72 +596,129 @@ body {
   }
 }
 
+@media screen and (min-width: 522px) {
+  .video-section {
+    padding-bottom: 6rem;
+  }
+}
+
 @media screen and (min-width: 742px) {
   .video-section-content-container {
     max-width: 46.375rem;
     margin: auto;
   }
 }
-
-/**** END: INDEX SECOND ROW MEDIA QUERIES ****/
-/**** BEGIN: INDEX THIRD ROW BASE STYLES ****/
+@media screen and (min-width: 1150px) {
+  .video-section h2 {
+    font-size: 2.25rem;
+  }
+  .video-section h5 {
+    font-size: 1.25rem;
+  }
+}
+/**** END: VIDEO SECTION MEDIA QUERIES ****/
+/**** BEGIN: ML-IN-EXCEL BANNER SECTION BASE STYLES ****/
 
 .ml-in-excel-banner-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-color: #04294e;
+  background-color: var(--background-medium);
 }
 
-.ml-in-excel-banner-content-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.ml-in-excel-banner h2 {
-  color: white;
+.ml-in-excel-banner-copy-container h5 {
+  color: #1E90FF;
   margin-left: 1.5rem;
-  line-height: 1.2em;
+}
+
+.ml-in-excel-banner-section h2 {
+  margin-top: 1rem;
+  color: var(--text-white);
+  margin-left: 1.5rem;
+  line-height: 120%;
   font-size: 1.875rem;
   font-weight: bold;
-}
-.ml-in-excel-banner p {
-  margin-left: 1.5rem;
-  margin-right: 3rem;
-  margin-top: 1rem;
-  color: #9fcfff;
+  width: calc(100% - 3rem);
 }
 
-.third-row-button {
+.ml-in-excel-banner-copy-container br {
+  display: none;
+}
+
+
+.ml-in-excel-banner-copy-container p {
   margin-left: 1.5rem;
-  margin-top: 1rem;
+  margin-right: 3rem;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.5rem;
+}
+
+.ml-in-excel-banner-button {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
   padding: 14px 20px;
-  color: #033f29;
-  background-color: #0def9d;
+  color: var(--primary-accent-green);
+  background-color: var(--background-medium);
+  border: solid .1rem var(--primary-accent-green);
   display: inline-block;
   font-size: 0.8em;
   text-decoration: none;
   font-weight: 500;
 }
-
-.free-resources-container {
-  order: 2;
+.ml-in-excel-banner-button:hover {
+  background-color: var(--primary-accent-green);
+  color: var(--background-medium);
 }
+.free-resources-container-mobile-tablet p {
+  color: var(--text-secondary);
+  line-height: 1.25rem;
+  margin-left: 1.5rem;
+  width: calc(100% - 3rem);
+  margin-top: 1.5rem;
+  font-size: .875rem;
+}
+
+
+.free-resources-container-desktop {
+  display: none;
+}
+
+.free-resources-container-desktop h5 {
+  color: var(--text-white);
+  font-weight: bold;
+  font-size: .875rem;
+  margin-top: 1rem;
+}
+
+.free-resources-container-desktop p {
+  color: var(--text-secondary);
+  line-height: 1.25rem;
+  margin-left: 1.5rem;
+  width: calc(100% - 3rem);
+  margin-top: .75rem;
+  font-size: .875rem;
+  max-width: 32.54rem;
+}
+
 
 .resources-icon {
-  margin-left: 0.65rem;
+  margin-left: 1rem;
   margin-top: 3rem;
   display: block;
+  background-color: rgb(40,24,208);
+  border-radius: 50%;
+  padding:.25rem;
 }
 
-.excel-product1 {
+.excel-illustration-hierarchical {
   width: calc(100% - 1.5rem);
   margin-top: 3rem;
   margin-left: 0.75rem;
 }
 
-.excel-product {
+.excel-illustration-DBSCAN {
   width: calc(100% - 1.5rem);
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-left: 0.75rem;
 }
 
@@ -621,8 +726,7 @@ body {
   margin-top: 1rem;
   margin-left: 1.5rem;
   font-size: 0.875rem;
-  color: #1ffffc;
-  font-weight: 500;
+  color: #30EEEC;
   display: flex;
   align-items: center;
 }
@@ -639,164 +743,251 @@ body {
   display: inline-block;
 }
 
-.ml-in-excel-banner span {
+.ml-in-excel-banner-caption {
   font-size: 0.875rem;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  margin-left: 1.5rem;
+  width: calc(100% - 3rem);
+  line-height: 1.25rem;
 }
 
-/**** END: INDEX THIRD ROW BASE STYLES ****/
-/**** BEGIN: INDEX THIRD ROW MEDIA QUERIES ****/
 
+
+/**** END: ML-IN-EXCEL BANNER SECTION BASE STYLES ****/
+/**** BEGIN: ML-IN-EXCEL BANNER SECTION MEDIA QUERIES ****/
+
+
+@media screen and (min-width: 436px) {
+  .excel-illustration-hierarchical {
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+  }
+  .excel-illustration-DBSCAN {
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 513px) {
+  .ml-in-excel-banner-copy-container br {
+    display: inline;
+  }
+}
 @media screen and (min-width: 620px) {
-  .excel-product {
-    width: calc(100% - 3rem);
-    margin-left: 1.5rem;
-  }
-  .excel-product1 {
-    width: calc(100% - 3rem);
-    margin-left: 1.5rem;
+
+  .ml-in-excel-banner-copy-container {
+    max-width: 29rem;
   }
 
-  .ml-in-excel-banner {
-    padding-top: 4rem;
-  }
-
-  .ml-in-excel-banner h2 {
-    margin-top: 1rem;
-  }
-  .ml-in-excel-banner-content-container {
-    display: flex;
-    max-width: 50.25rem;
-  }
-
-  .resources-icon {
-    margin-top: 2rem;
-  }
-
-  .ml-index-copy-container {
-    max-width: 19rem;
-  }
-
-  .ml-in-excel-banner p {
-    max-width: 16.14375rem;
-  }
-  .ml-in-excel-banner span {
+  .ml-in-excel-banner-copy-container br {
     display: none;
   }
-  .excel-product1 {
-    height: 16rem;
+
+  .ml-in-excel-banner-content-container {
+    /* display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 440px 400px;  */
+    display: flex;
+  }
+
+  .free-resources-container-mobile-tablet {
+    /* grid-row: 2;
+    grid-column: 1/2; */
+    display: none;
+  }
+
+  .free-resources-container-desktop {
+    /* grid-row: 2;
+    grid-column: 1/2; */
+    display: block;
+  }
+
+  
+
+  .resources-link {
+    margin-left: -.5rem;
+  }
+
+
+  .ml-in-excel-banner-copy-container {
+    /* max-width: 19rem; */
+    /* grid-row: 1;
+    grid-column: 1/2; */
+  }
+
+  .ml-in-excel-banner-copy-section p {
+    /* max-width: 16.14375rem; */
+  }
+  
+  .excel-illustration-hierarchical {
+    height: clamp(18rem, 11.5000rem + 16.0000vw, 20rem);
     margin-top: 1.5rem;
     width: auto;
-    margin-left: 0;
+    margin-left: 1rem;
   }
 
-  .excel-product {
-    height: 16rem;
+  .excel-illustration-DBSCAN {
+    height: clamp(18rem, 11.5000rem + 16.0000vw, 20rem);
     margin-top: 1.5rem;
     width: auto;
-    margin-left: 0;
+    margin-left: 1rem;
   }
 
-  .excel-product-container {
-    width: 55%;
-    position: relative;
-  }
-}
-
-@media screen and (min-width: 638px) {
-  .excel-product1 {
-    margin-left: 3rem;
+  .ml-in-excel-banner-caption {
+    margin-left: 2rem;
+    width: calc(100% - 3rem);
   }
 
-  .excel-product {
-    margin-left: 3rem;
+  .ml-in-excel-link-container {
+      margin-left: 2rem;
   }
 
-  .third-row-link {
-    margin-left: 3rem;
+  .excel-illustration-container {
+    width: 50%;
   }
 }
 
-@media screen and (min-width: 574px) {
-  .ml-index-copy-container {
-    max-width: 20rem;
-  }
 
-  .excel-product1 {
-    height: clamp(20rem, -32.4211rem + 112.2807vw, 20rem);
-  }
-
-  .excel-product {
-    height: clamp(20rem, -32.4211rem + 112.2807vw, 20rem);
-  }
-}
-@media screen and (min-width: 804px) {
-  .third-row-content-container {
-    margin: auto;
-  }
+@media screen and (min-width: 714px) {
+  
 }
 
-/**** END: INDEX THIRD ROW MEDIA QUERIES ****/
-/**** BEGIN: INDEX FOURTH ROW BASE STYLES ****/
+/* 
+@media screen and (min-width: 1011px) {
 
-.fourth-row {
+  .ml-in-excel-banner-copy-container br {
+    display: inline;
+  }
+} */
+
+@media screen and (min-width: 1077px) {
+.ml-in-excel-banner-caption {
+  width: calc(100% - 1rem);
+}
+}
+
+
+@media screen and (min-width: 1112px) {
+  .ml-in-excel-banner-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ml-in-excel-banner-content-container {
+    max-width: clamp(69.5rem, 48.2639rem + 30.5556vw, 75rem);
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .ml-in-excel-banner-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .ml-in-excel-banner-section h5 {
+    font-size: 1.25rem;
+  }
+  .ml-in-excel-banner-copy-container br {
+    display: none;
+  }
+  .ml-in-excel-banner-copy-container {
+    /* max-width: 32.54rem; */
+  }
+}
+
+
+/**** END: ML-IN-EXCEL BANNER SECTION MEDIA QUERIES ****/
+/**** BEGIN: TESTIMONIAL SECTION BASE STYLES ****/
+
+.testimonial-section {
   padding-top: 4rem;
   padding-bottom: 6rem;
-  color: var(--text-black);
+  color: var(--text-white);
+  background-color: var(--background-light);
 }
 
-.fourth-row h2 {
+.testimonial-section-title-copy-container h2 {
   margin-left: 1.5rem;
-  line-height: 1.2em;
+  line-height: 120%;
   font-size: 1.875rem;
   font-weight: bold;
 }
 
-.fourth-row p {
+.testimonial-section-title-copy-container p {
+  color: var(--text-secondary);
+  line-height: 1.25rem;
+}
+
+.testimonial-section p {
   margin-top: 1.5rem;
   margin-left: 1.5rem;
   width: calc(100% - 3rem);
 }
 
 .testimonial {
-  margin-top: 3rem;
+  margin-top: 2rem;
+  font-size: .875rem;
 }
 
-.testimonial-img {
+.well-constructed-icon {
   margin-left: 1rem;
+  background-color: rgb(40,24,208);
+  border-radius: 50%;
+  padding: .25rem;
 }
 
-.fourth-row h5 {
+.testimonial-icon-circular {
+  margin-left: 1rem;
+  background-color: rgb(40,24,208);
+  border-radius: 50%;
+  padding: .25rem;
+}
+
+.testimonial-section h5 {
   font-weight: bold;
-  margin-top: 0.25rem;
+  margin-top: 1rem;
   margin-left: 1.5rem;
 }
 
 .testimonial p {
-  margin-top: 0.75rem;
-  max-width: 23.25rem;
+  margin-top: .75rem;
+  /* max-width: 23.25rem; */
+  line-height: 1.25rem;
+  color: var(--text-secondary);
 }
 
-.testimonial-p {
-  text-indent: -0.5em;
+.testimonial-nudge-medium {
+  text-indent: -0.4rem;
 }
 
-.testimonial-p2 {
-  text-indent: -0.4em;
+.testimonial-nudge-small {
+  text-indent: -0.3rem;
 }
 
 .testimonial-name {
+  font-size: .75rem;
   font-weight: 500;
+  color: var(--text-white);
+  margin-left: 1.5rem;
+  margin-top: .75rem;
+  line-height: 1rem;
 }
 
-.fourth-row span {
-  color: #1e90ff;
+.testimonial-section span {
+  color:#1E90FF;
 }
 
-/**** END: INDEX FOURTH ROW BASE STYLES ****/
-/**** BEGIN: INDEX FOURTH ROW MEDIA QUERIES ****/
-/**** END: INDEX FOURTH ROW MEDIA QUERIES ****/
+/**** END: TESTIMONIAL SECTION BASE STYLES ****/
+/**** BEGIN: TESTIMONIAL SECTION MEDIA QUERIES ****/
+/**** END: TESTIMONILA SECTION MEDIA QUERIES ****/
 
 @media screen and (min-width: 638px) {
+
+  .testimonial-section-title-copy-container {
+    width: calc(100% - 3rem);
+    margin: auto;
+  }
+
   .testimonial-container {
     display: flex;
     flex-wrap: wrap;
@@ -808,79 +999,63 @@ body {
     width: 50%;
     margin-left: 0;
   }
-}
 
-@media screen and (min-width: 1196px) {
-  .testimonial {
-    width: 20%;
-    margin-left: 4%;
+  .testimonial p {
+   max-width: none;
   }
 }
 
-/**** BEGIN: INDEX FIFTH ROW BASE STYLES ****/
-
-.fifth-row {
-  padding-bottom: 3em;
+@media screen and (min-width: 638px) {
+  .testimonial-section-title-copy-container {
+    text-align: center;
+    max-width: 40rem;
+  }
 }
 
-.fifth-row h3 {
-  font-size: 20px;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  font-weight: bold;
+@media screen and (min-width: 1136px) {
+  .testimonial {
+    width: 25%;
+  }
+  .testimonial-container {
+    margin-top: 1rem;
+  }
 }
 
-.fifth-row h5 {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
+@media screen and (min-width: 1150px) {
+  .testimonial-section-title-copy-container h2 {
+    font-size: 2.25rem;
+  }
 }
-
-.fifth-row p {
-  margin-top: 0.4rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.fifth-row span {
-  text-indent: -0.45em;
-}
-/**** END: INDEX FIFTH ROW BASE STYLES ****/
-/**** BEGIN: INDEX FIFTH ROW MEDIA QUERIES ****/
-/**** END: INDEX FIFTH ROW MEDIA QUERIES ****/
-
 /**** BEGIN: INDEX SIXTH ROW BASE STYLES ****/
 
-.sixth-row {
-  background-color: #073f88;
+.contact-form-section {
+  background-color: var(--background-medium);
   padding-bottom: 6rem;
   padding-top: 4rem;
 }
 
-.sixth-row h5 {
-  color: #0def9d;
+.form-heading-container h5 {
+  color: #1E90FF;
 }
 
-.sixth-row h2 {
-  color: white;
-  margin-top: 0.75rem;
-  width: 170px;
+.form-heading-container h2 {
+  color: var(--text-white);
+  margin-top: 1rem;
   font-size: 1.875rem;
   font-weight: bold;
+  line-height: 120%;
 }
 
-.sixth-row br {
-  display: none;
-}
-
-.sixth-row p {
-  color: #9fcfff;
+.form-heading-container p {
+  color: var(--text-secondary);
   margin-top: 1rem;
   max-width: 370px;
+  line-height: 1.5rem;
 }
 input[type="email"] {
   margin-top: 0.75rem;
-  background-color: #073f88;
-  border: solid white 0.1rem;
+  border: none;
+  background-color: #04294E;
   color: #9fcfff;
   font-size: 0.8rem;
   padding-top: 0.5em;
@@ -891,8 +1066,8 @@ input[type="email"] {
 
 input[type="name"] {
   margin-top: 1rem;
-  background-color: #073f88;
-  border: solid white 0.1rem;
+  border: none;
+  background-color: #04294E;
   color: #9fcfff;
   font-size: 0.8rem;
   padding-top: 0.5em;
@@ -902,8 +1077,8 @@ input[type="name"] {
 }
 
 .contact-form-textarea {
-  background-color: #073f88;
-  border: solid white 0.1rem;
+  background-color: #04294E;
+  border: none;
   font-family: "archivo";
   height: 5em;
   margin-top: 0.75rem;
@@ -919,26 +1094,31 @@ input[type="name"] {
   opacity: 100%;
 }
 
-.contact-form-submit {
+.contact-form-submit-button {
   font-size: 0.8em;
-  color: #033f29;
-  background-color: #0def9d;
-  font-weight: 500;
-  border: none;
+  color: var(--primary-accent-green);
+  background-color: var(--background-medium);
+  border: solid .1rem var(--primary-accent-green);
   padding: 12px 20px;
   margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+.contact-form-submit-button:hover {
+  background-color: var(--primary-accent-green);
+  color: var(--background-medium);
 }
 
 .form-input-container {
-  max-width: 352.8px;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .form-heading-container {
-  max-width: 352.8px;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .form-container {
@@ -950,23 +1130,28 @@ input[type="name"] {
 /**** END: INDEX SIXTH ROW BASE STYLES ****/
 /**** BEGIN: INDEX SIXTH ROW MEDIA QUERIES ****/
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 600px) {
+  
   .form-container {
     flex-direction: row;
   }
-}
 
-@media screen and (min-width: 600px) {
   .form-heading-container {
     margin-right: 0;
+    max-width: 26.9375rem;
   }
-  .sixth-row h2 {
-    width: 180px;
+
+  .form-input-container {
+    max-width: 26.9375rem;
+  }
+
+  .form-heading-container h2 {
+    width: 13.75rem;
   }
 }
 
 @media screen and (min-width: 715px) {
-  .sixth-row h2 {
+  .form-heading-container h2 {
     width: 250px;
   }
 }
@@ -980,13 +1165,23 @@ input[type="name"] {
   }
 }
 
+@media screen and (min-width: 1150px) {
+  .form-heading-container h2 {
+    font-size: 2.25rem;
+    width: 18rem;
+  }
+  .form-heading-container h5 {
+    font-size: 1.25rem;
+  }
+}
+
 /**** END: INDEX SIXTH ROW MEDIA QUERIES ****/
 
 /**** BEGIN: FOOTER BASE STYLES ****/
 
 .footer {
   padding-top: 2em;
-  background-color: #04294e;
+  background-color: var(--background-dark);
   padding-bottom: 2em;
 }
 
@@ -1008,13 +1203,13 @@ input[type="name"] {
 
 .footer-nav a {
   font-size: 1em;
-  color: #9fcfff;
+  color: var(--text-secondary);
   text-decoration: none;
 }
 
 .footer h3 {
   font-size: 20px;
-  color: white;
+  color: var(--text-white);
   font-weight: 500;
   margin-left: 7%;
   margin-top: 3rem;
@@ -1023,13 +1218,13 @@ input[type="name"] {
 .footer span {
   display: inline-block;
   font-size: 16px;
-  color: #0def9d;
+  color: var(--primary-accent-green);
   margin-left: 7%;
   margin-top: 1.5rem;
 }
 
 .footer-address {
-  color: white;
+  color: var(--text-secondary);
   font-weight: 500;
   margin-left: 7%;
   margin-right: 1rem;
@@ -1049,7 +1244,7 @@ input[type="name"] {
 
 .copywrite-text {
   font-size: 12px;
-  color: #9fcfff;
+  color: var(--text-secondary);
   margin-left: 7%;
   margin-top: 1rem;
 }
@@ -1111,21 +1306,70 @@ input[type="name"] {
 /**** BEGIN: COURSE PAGE BASE STYLES ****/
 
 .courses-heading {
-  height: 8rem;
-  background-color: #073f88;
-  background-image: url("img/courses-heading-bg-img.jpg");
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  align-items: flex-end;
+  background-color: var(--background-medium);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  border-top: .1rem solid #073F88;
+  border-bottom: .1rem solid #073F88;
 }
 
-.courses-heading h1 {
-  color: white;
+.c-h-content-container {
+  display: flex;
+  align-items: center;
+  max-width: 58rem;
+  margin: auto;
+}
+
+.c-h-icon-container {
+  display: none;
+  width: clamp(18rem, -36.0000rem + 96.0000vw, 24rem);
+}
+.c-h-copy-container h1 {
+  color: var(--text-white);
+  margin-left: 1rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+}
+
+.c-h-copy-container h2 {
+  color: var(--text-white);
   margin-left: 1rem;
   margin-bottom: 0.25rem;
   font-size: 1.25rem;
-  line-height: 2.25rem;
+  margin-top: 1rem;
+  padding-bottom: .5rem;
+  line-height: 1.5rem;
+  max-width: calc(100% - 2rem);
+}
+
+.c-h-copy-container p {
+  font-size: 1rem;
+  margin-left: 1rem;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+  max-width: calc(100% - 2rem);
+}
+
+
+.c-h-copy-link-con {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  font-size: 0.875rem;
+  color: #30EEEC;
+  display: flex;
+  align-items: center;
+}
+
+.c-h-copy-link:hover ~ img {
+  transform: translate(0.25rem);
+  transition: 100ms;
+}
+
+.courses-icon {
+  background-color: rgb(40,24,208);
+  border-radius: 50%;
 }
 
 .course-info-element {
@@ -1142,47 +1386,43 @@ input[type="name"] {
 }
 
 .courses-main {
-  padding-bottom: 5em;
-  color: var(--text-black);
+  background-color: var(--background-light);
+  padding-bottom: 5rem;
 }
 
-.courses-main h2 {
+
+.course-info-container h5 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-left: 1rem;
-  margin-top: 1rem;
+  color: var(--text-white);
+  font-weight: bold;
+  margin-top: 1.5rem;
 }
-.courses-main p {
-  margin-top: 0.7rem;
+.course-info-container p {
+  color: var(--text-secondary); 
   margin-left: 1rem;
+  max-width: calc(100% - 2rem);
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+
+.course-info-container li {
+  margin-left: 2.5rem;
   margin-right: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.course-info-container ul {
+  list-style-image: url(img/check-bullet.svg);
+  margin-top: 1.5rem;
 }
 
 /**** END: COURSE PAGE BASE STYLES ****/
 /**** BEGIN: COURSE PAGE MEDIA QUERIES ****/
 
-@media screen and (min-width: 368px) {
-  .courses-heading h1 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .courses-main h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media screen and (min-width: 394px) {
-  .courses-heading h1 {
-    font-size: 3rem;
-    line-height: 1;
-  }
-  .courses-main h2 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
 @media screen and (min-width: 946px) {
   .course-info-element {
     display: flex;
@@ -1198,17 +1438,15 @@ input[type="name"] {
     margin-top: 1.8rem;
   }
 }
-@media screen and (min-width: 1129px) {
-  .courses-heading {
-    height: 200px;
+
+@media screen and (min-width: 726px) {
+  .c-h-icon-container {
+    display: block;
   }
 }
 
 @media screen and (min-width: 1272px) {
-  .courses-main h2 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
+ 
   .course-illustration {
     margin-top: 2rem;
     width: 32em;
@@ -1235,39 +1473,51 @@ input[type="name"] {
   align-items: flex-end;
 }
 
-.ml-in-excel-heading h1 {
-  color: white;
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
+.ml-ex-search-cont-con {
+  max-width: 58rem;
+  margin: auto;
+}
+
+.ml-in-excel-copy-container h1 {
+  color: var(--text-white);
+  margin-left: 1rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
+  font-weight: bold;
+}
+
+.ml-ex-search-section {
+  background-color: var(--background-medium);
+  border-top: .1rem solid #073F88;
+  border-bottom: .1rem solid #073F88;
 }
 
 .ml-in-excel-copy-container {
-  background-color: #cfe7ff;
-  padding-top: 2em;
+  padding-top: 3rem;
   padding-bottom: 1em;
-  color: var(--text-black);
 }
 
 .ml-in-excel-copy-container h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  color: var(--text-white);
   margin-left: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
   margin-top: 1rem;
-  line-height: 110%;
+  padding-bottom: .5rem;
+  line-height: 1.5rem;
+  max-width: calc(100% - 2rem);
 }
 .ml-in-excel-copy-container p {
-  margin-top: 1.7rem;
+  margin-top: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  line-height: 145%;
+  line-height: 1.5rem;
+  color: var(--text-secondary);
 }
 
 .search-element-container {
   padding-top: 1em;
   padding-bottom: 2em;
-  background-color: #cfe7ff;
 }
 
 .search-element-container h3 {
@@ -1279,7 +1529,7 @@ input[type="name"] {
 .search-input {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #04294E;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 1rem;
@@ -1290,7 +1540,7 @@ input[type="name"] {
   display: inline-block;
   width: 17px;
   padding-top: 2px;
-  background-color: white;
+  background-color: #04294E;
 }
 
 input[type="text"] {
@@ -1300,13 +1550,14 @@ input[type="text"] {
   padding-top: 1em;
   padding-bottom: 1em;
   border: none;
-  background-color: white;
+  background-color: #04294E;
+  color: #9fcfff;
 }
 
 .go-button {
   font-size: 0.8em;
-  color: white;
-  background-color: #04294e;
+  color: #033F29;
+  background-color: var(--primary-accent-green);
   font-weight: 500;
   border: none;
   padding: 1.25em;
@@ -1357,44 +1608,80 @@ select {
 }
 /**** END: ML-IN-EXCEL MEDIA QUERIES ****/
 /**** BEGIN: ABOUT PAGE BASE STYLES ****/
+
+.about-copy-section {
+  background-color: var(--background-medium);
+  border-top: .1rem solid #073F88;
+  border-bottom: .1rem solid #073F88;
+}
 .about-copy {
-  background-color: #063462;
-  padding-top: 2em;
-  padding-bottom: 3em;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  max-width: 928px;
+  margin: auto;
+}
+
+.about-copy h1 {
+  color: var(--text-white);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+  margin-left: 1rem;
 }
 
 .about-copy h2 {
-  color: #a5d2ff;
-  font-weight: medium;
-  font-size: 30px;
+  color: var(--text-white);
   margin-left: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding-bottom: .5rem;
+  line-height: 1.5rem;
+  max-width: calc(100% - 2rem);
 }
 
-.about-copy h2 span {
-  color: #0def9d;
-}
 
 .about-copy p {
-  color: #ffffff;
+  font-size: 1rem;
   margin-left: 1rem;
-  margin-top: 1rem;
-  width: calc(100% - 2rem);
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+  max-width: calc(100% - 2rem);
 }
 .phil-teaching {
-  width: 100%;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-top: 4rem;
   background-image: url("img/phil-teaching.jpg");
   background-size: cover;
   height: 72vw;
   max-height: 378px;
 }
 
+.about-illustration-caption {
+  font-size: .875rem;
+  color: var(--text-secondary);
+  margin-left: 1rem;
+  max-width: calc(100% - 3rem);
+  line-height: 1.25rem;
+  margin-top: .25rem;
+  margin-bottom: 3rem;
+}
+
+.about-copy span {
+  font-weight: bold;
+  color: var(--text-white);
+}
+
 .bio-container {
   padding-top: 1em;
   padding-bottom: 4em;
+  background-color: var(--background-light);
 }
 
 .mobile-about-sub-heading {
-  background-color: #08af72;
+  background-color: #1E90FF;
   height: 36vw;
   padding-bottom: 0.5em;
   max-height: 147px;
@@ -1430,36 +1717,32 @@ select {
 }
 
 .founder-profile h4 {
-  font-size: 16px;
   font-weight: bold;
-  color: #113654;
+  font-size: .875rem;
+  color: var(--text-white);
   margin-top: 0.5rem;
 }
 
 .founder-profile h5 {
-  font-size: 12px;
+  font-size: .75rem;
   color: #0c7ae9;
-  font-weight: medium;
+  font-weight: 500;
   margin-top: 0.25rem;
 }
 .founder-profile p {
-  font-size: 16px;
-  color: #113654;
+  font-size: .875rem;
+  color: var(--text-secondary);
   margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   max-width: 273px;
+  line-height: 1.25rem;
 }
 /**** END: ABOUT PAGE BASE STYLES ****/
 /**** BEGIN: ABOUT PAGE MEDIA QUERIES ****/
 
 @media screen and (min-width: 600px) {
-  .about-copy {
-    padding-top: 3em;
-  }
-  .about-copy h2 {
-    font-size: 36px;
-  }
+  
   .mobile-about-sub-heading h3 {
     font-size: 36px;
   }
@@ -1469,28 +1752,7 @@ select {
 }
 
 @media screen and (min-width: 766px) {
-  .about-section1 {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .about-copy {
-    padding-top: 4.5em;
-    padding-bottom: 5em;
-    width: 100%;
-  }
-  .about-copy h2 {
-    margin-left: 2rem;
-  }
-  .about-copy p {
-    margin-left: 2rem;
-    width: calc(100% - 4rem);
-    max-width: 480px;
-  }
-  .phil-teaching {
-    height: 516.8px;
-    max-height: 516.8px;
-    background-position: 20%;
-  }
+
 }
 
 @media screen and (min-width: 627px) {
@@ -1507,18 +1769,8 @@ select {
   }
 }
 @media screen and (min-width: 984px) {
-  .about-section1 {
-    background-color: #063462;
-  }
-  .phil-teaching {
-    width: 50%;
-  }
-  .about-copy {
-    width: 50%;
-  }
-  .about-copy h2 {
-    font-size: 48px;
-  }
+ 
+  
   .mobile-about-sub-heading {
     padding-bottom: 1em;
     padding-top: 1em;
@@ -1534,30 +1786,5 @@ select {
   }
 }
 
-@media screen and (min-width: 1084px) {
-  .about-copy {
-    width: 45%;
-  }
-  .phil-teaching {
-    width: 55%;
-  }
-}
 
-@media screen and (min-width: 1180px) {
-  .about-copy {
-    width: 42%;
-  }
-  .phil-teaching {
-    width: 58%;
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  .about-copy h2 {
-    margin-left: 3.5vw;
-  }
-  .about-copy p {
-    margin-left: 3.5vw;
-  }
-}
 /**** END: ABOUT PAGE MEDIA QUERIES ****/
