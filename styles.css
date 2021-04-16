@@ -1445,12 +1445,12 @@ input[type="name"] {
 /**** END: COURSE PAGE BASE STYLES ****/
 /**** BEGIN: COURSE PAGE MEDIA QUERIES ****/
 
-@media screen and (min-width: 946px) {
+@media screen and (min-width: 994px) {
   .course-info-element {
     display: flex;
     flex-direction: row-reverse;
     width: 95%;
-    max-width: 925.3px;
+    max-width: none;
     align-items: center;
   }
   .course-info-container {
