@@ -907,12 +907,13 @@ video:focus {
 /**** BEGIN: TESTIMONIAL SECTION BASE STYLES ****/
 
 .testimonial-section {
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 6rem;
   color: var(--text-white);
   background-color: var(--background-light);
   border-bottom: .1rem solid #073F88;
 }
+
 
 .testimonial-section-title-copy-container h2 {
   margin-left: 1.5rem;
@@ -920,6 +921,7 @@ video:focus {
   font-size: 1.875rem;
   font-weight: bold;
 }
+
 
 .testimonial-section-title-copy-container p {
   color: var(--text-secondary);
@@ -933,7 +935,7 @@ video:focus {
 }
 
 .testimonial {
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: .875rem;
 }
 
@@ -989,6 +991,22 @@ video:focus {
 /**** BEGIN: TESTIMONIAL SECTION MEDIA QUERIES ****/
 /**** END: TESTIMONILA SECTION MEDIA QUERIES ****/
 
+@media screen and (min-width: 442px) {
+
+  .testimonial-section-title-copy-container h2 {
+   margin-left: 0;
+  }
+
+.test-br {
+  display: none; 
+}
+
+.testimonial-section-title-copy-container {
+  text-align: center;
+}
+
+
+}
 @media screen and (min-width: 638px) {
 
   .testimonial-section-title-copy-container {
@@ -1365,6 +1383,10 @@ input[type="name"] {
   max-width: calc(100% - 2rem);
 }
 
+.c-h-copy-container br {
+  display: none;
+}
+
 .c-h-copy-container p {
   font-size: 1rem;
   margin-left: 1rem;
@@ -1379,9 +1401,12 @@ input[type="name"] {
   margin-top: 1.5rem;
   margin-left: 1rem;
   font-size: 0.875rem;
-  color: #30EEEC;
   display: flex;
   align-items: center;
+}
+
+.c-h-copy-link {
+  color: #30EEEC;
 }
 
 .c-h-copy-link:hover ~ img {
@@ -1445,6 +1470,12 @@ input[type="name"] {
 /**** END: COURSE PAGE BASE STYLES ****/
 /**** BEGIN: COURSE PAGE MEDIA QUERIES ****/
 
+@media screen and (min-width: 478px) {
+.c-h-copy-container br {
+  display: inline;
+}
+
+}
 @media screen and (min-width: 994px) {
   .course-info-element {
     display: flex;
@@ -1708,7 +1739,7 @@ select {
 .mobile-about-sub-heading {
   background-color: var(--background-light);
   text-align: center;
-  padding-top: 2.5rem;
+  padding-top: 3rem;
 }
 .mobile-about-sub-heading h3 {
   color: white;
