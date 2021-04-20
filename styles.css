@@ -1785,8 +1785,6 @@ select {
 /**** END: ABOUT PAGE BASE STYLES ****/
 /**** BEGIN: ABOUT PAGE MEDIA QUERIES ****/
 
-
-
 @media screen and (min-width: 627px) {
   .bio-container {
     display: grid;
@@ -1800,7 +1798,5 @@ select {
     margin: auto;
   }
 }
-
-
 
 /**** END: ABOUT PAGE MEDIA QUERIES ****/
